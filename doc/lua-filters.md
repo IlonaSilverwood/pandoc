@@ -4529,14 +4529,14 @@ Value used to represent the `null` JSON value. (userdata)
 
 `decode (str[, pandoc_types])`
 
-If the input can be decoded as representing an [Inline], [Block],
-[Pandoc], [Inlines], or [Blocks] element, the function will return
-an object of the appropriate type. When the input cannot be
-decoded as representing one of those elements, default decoding is
-applied. By default, objects and arrays are represented as tables,
-the JSON null value becomes [null](#pandoc.json.null), and JSON
-booleans, strings, and numbers are converted using the Lua types
-of the same name.
+Creates a Lua object from a JSON string. If the input can be
+decoded as representing an [Inline], [Block], [Pandoc], [Inlines],
+or [Blocks] element, the function will return an object of the
+appropriate type. When the input cannot be decoded as representing
+one of those elements, default decoding is applied. By default,
+objects and arrays are represented as tables, the JSON null value
+becomes [null](#pandoc.json.null), and JSON booleans, strings, and
+numbers are converted using the Lua types of the same name.
 
 The special handling of AST elements can be disabled by setting
 `pandoc_types` to `false`.
